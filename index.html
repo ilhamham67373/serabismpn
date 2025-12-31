@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minrcraft Server - Serabi SMP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Efek Gulir Halus */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color:   ;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1a1a1a;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+        nav a:hover { opacity: 1; color: #a855f7; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero / Logo Section */
+        .hero { 
+            text-align: center; 
+            margin: 40px 0 20px 0; 
+        }
+        
+        .logo-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #6a0dad;
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+            pointer-events: none; /* Foto tidak bisa diklik */
+            user-select: none;
+            object-fit: cover;
+            background-color: #222;
+        }
+
+        .clan-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 10px 0;
+            background: linear-gradient(to bottom, #fff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+            max-width: 500px;
+            margin: 0 auto 20px auto;
+        }
+
+        .btn-main {
+            background-color: #a855f7;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 40px;
+            transition: 0.3s;
+        }
+        .btn-main:hover { transform: scale(1.05); background: #9333ea; }
+
+        /* Grid Bisnis & Aktivitas (Di Bawah Logo) */
+        .section-header {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+
+        .section-header h2 {
+            color: #a855f7;
+            font-size: 26px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .top-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .info-box {
+            background: #111;
+            border: 1px solid #222;
+            border-left: 4px solid #6a0dad;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .info-box h3 { color: #fff; margin-top: 0; font-size: 18px; }
+        .info-box p { color: #aaa; font-size: 13px; margin-bottom: 0; }
+        
+        }
+         .info-boxx {
+            background: #111;
+            border: 1px solid #222;
+            border-left: 4px solid #6a0dad;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .info-box h3 { color: #fff; margin-top: 0; font-size: 18px; }
+        .info-box p { color: #aaa; font-size: 13px; margin-bottom: 0; }
+
+        /* Card Undangan & Gambar */
+        .card {
+            background-color: #121212;
+            border: 1px solid #1f1f1f;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            pointer-events: none; /* Tidak bisa diklik */
+            display: block;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 1px solid #6a0dad;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .item { margin-bottom: 8px; font-size: 14px; color: #ccc; }
+        .icon { color: #facc15; margin-right: 8px; }
+
+        /* Kontak Section yang Dipercantik */
+        .contact-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(168, 85, 247, 0.05);
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .btn-contact {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+  .          border-radius: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn-wa { background: #25D366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .btn-wa:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+
+        .btn-discord { background: #5865F2; box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3); }
+        .btn-discord { background: #5865F2; box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3); }
+        .btn-discord:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #444;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .top-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#information">Infomation</a>
+        <a href="#undangan">undangan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="hero">
+            <img src="https://cdn.discordapp.com/attachments/1388342161254252695/1455748239658848459/1766964628962.png?ex=6955dab2&is=69548932&hm=b3dd3f438dda888accd83e3a90298cf8bbba762bdbc2085796abe5a66aa4d469&" alt="Clan Logo" class="logo-img">
+            <div class="clan-title">SERABI SMP</div>
+            <p class="subtitle">Halo, Creator! 👋 Kami ingin mengundang kamu sebagai Content Creator terpilih untuk bergabung dalam Server Private Minecraft – SerabiSMP.</p>
+            <a href="#undangan" class="btn-main">Lihat Undangan</a>
+        </div>
+
+        <div id="information">
+            <div class="section-header">
+                <h2>INFOMATION ALL SERVICE</h2>
+                <p style="color: #666; font-size: 13px;">SerabiSMP merupakan server Survival Multiplayer dengan konsep hiburan, momen seru, serta interaksi antar pemain yang dibalut dengan konten menarik. Kami percaya bahwa kehadiranmu dapat membawa warna dan pengalaman baru bagi komunitas kami.</p>
+            </div>
+            
+            <div class="top-grid">
+                <div class="info-box">
+                    <h3>Struktur</h3>
+                    <p>Di Server Ini Bertemakan Economy Survival, Berpetualang, Dengan Ada Campuran Sedikit Kata Roleplay.</p>
+                </div>
+                <div class="info-box">
+                    <h3>KNP SERVER INI SEPRTI BAKWAN SMP?</h3>
+                    <p>Bakwan Smp Adalah Server Survival Economy Yanh Dibuat Oleh Seseorang Youtuber Dan Teman² Youtuber Nya Yang Bernama ( @BeaconCream ), Jadi Team Kita Serabi Comunity Ingin Membuat Server Yang Mirip Seperti Bakwan SMP!!.</p>
+                    <img src="https://cdn.discordapp.com/attachments/1388342161254252695/1455752753321214205/image0.jpg?ex=6955dee6&is=69548d66&hm=e69d7e86ff194e6456b71ea8dbd144ff5aef562ba7581025bdab0ee4969455bc&" alt="Banner Serabi" class="image-placeholder">
+                <div class="info-boxx">
+                    <h4>TENTANG SERABI SMP</h4>
+                    <p>Serabi Smp Awalnya Cuma Angan Angan Karena Kita Hanya Orang Biasa Yanh Tidak Mengerti Cara Mengkoding, Setup Server, Developer Server, Awalnya Dari Salah Satu Teman Yaitu (<a href="https://youtube.com/@dexmcnew?si=CpZxjmISJQ2uf3Mn" style="color: white; text-decoration: underline;">@Dexmc_</a>) Dia Mengajak Aku Yaitu (<a href="https://www.youtube.com/@Dezirrr" style="color: white; text-decoration: underline;">@Dezirrr</a>) Mereka Bedua Pun Kebingungan Dengan Plugin, Mods Apa Yang Digunakan Untuk Membuat Server Seperti Bakwan SMP Tapi Setelah Reset Mendalam mereka Pun Sedikit Ada Jalan Yang Memudahkan Mereka Untuk Membuat Server, Banyak Cobaan Namun Mereka Akan Lewati!!</p>
+                  <img src="https://cdn.discordapp.com/attachments/1388342161254252695/1455758340079620107/img_1767150222215.jpg?ex=6955e41a&is=6954929a&hm=56ca758e597a352c7c37d28ca4431657b87a366f0d0a077de054b4720d4ca0e7&" alt="Banner Serabi" class="image-placeholder">
+                  <iframe width="460" height="215" 
+                       src="https://www.youtube.com/embed/kgfqZvl4Yf4?autoplay=1&mute=1" 
+                       frameborder="0" 
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+                 </iframe>
+            </div>
+        </div>
+
+        <div class="card" id="undangan">            
+          <img src="https://cdn.discordapp.com/attachments/1388342161254252695/1455770478558842997/Tak_berjudul35_20251231105144.png?ex=6955ef68&is=69549de8&hm=17923fd434a96dc27ce67fd7732e2f36a203f53d508f1ee6b1f6ce5f3cbdb737&" alt="Benefit" class="image-placeholder">
+            
+            <h2>Undangan ( Private ) SerabiSMP</h2>
+            <p style="font-size: 14px; color: #aaa; margin-bottom: 20px;">Kami mengundang para Survival Multiplayer Creator terpilih untuk bergabung dalam server Minecraft kami. Persiapkan dirimu untuk petualangan baru.</p>
+            
+            <div class="item"><span class="icon">🏆</span><strong>Name:</strong> Server SerabiSMP</div>
+            <div class="item"><span class="icon">🏆</span><strong>Versi:</strong> 1.20.1 ( Forge Optifine )</div>
+            <div class="item"><span class="icon">🏆</span><strong>Whitelist:</strong> Creator Only</div>
+            <div class="item"><span class="icon">🏆</span><strong>Tanggal Pembukaan:</strong> ( Menunggu Informasi Admin )</div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/1388342161254252695/1455003988305907816/ANiME_girls_2.jpeg?ex=6955c88f&is=6954770f&hm=e2a81f409eaebacca6f9f2f70ecfb8c8bc2b3a2781a62dbf702024e9fc36c8d1&" alt="Benefit" class="image-placeholder">
+            
+            <h2>Benefit untuk Creator</h2>
+            <div class="item"><span class="icon">🏆</span> Akses eksklusif ke server private.</div>
+            <div class="item"><span class="icon">🏆</span> Kesempatan kolaborasi dengan player lain.</div>
+            <div class="item"><span class="icon">🏆</span> Potensi konten menarik untuk YouTube, TikTok, dll.</div>
+            <div class="item"><span class="icon">🏆</span> Event dan challenge khusus creator</div>
+        </div>
+
+        <div class="contact-section" id="kontak">
+            <h2 style="color: #a855f7;">KONTAK KAMI</h2>
+            <p style="color: #888; font-size: 10px;">Hubungi kami sekarang untuk bergabung atau bertanya lebih lanjut.</p>
+            <div class="contact-container">
+                <a href="https://wa.me/082146050318" class="btn-contact btn-wa" target="_blank">
+                    WHATSAPP ADMIN¹
+                </a>
+
+                <a href="https://discordapp.com/users/1344889892039295037" class="btn-contact btn-discord" target="_blank">
+                    DISCORD ADMIN¹
+                </a>
+            <div class="contact-container">
+                 <a href="https://wa.me/6282245432748" class="btn-contact btn-wa" target="_blank">
+                    WHATSAPP ADMIN²
+                </a>
+
+                 <a href="https://discordapp.com/users/1387404088643424351" class="btn-contact btn-discord" target="_blank">
+                    DISCORD ADMIN²
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 NightMare Clan. All Nights Cat Reserved.
+    </footer>
+
+</body>
+</html>
